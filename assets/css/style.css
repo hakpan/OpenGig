@@ -18,3 +18,15 @@ html,body{height:100%;}
 .full-width {
 	width: 100%;
 }
+
+.bg-a {
+	background-color: red;
+}
+
+.bg-b {
+	background-color: green;
+}
+
+.bg-c {
+	background-color: blue;
+}
