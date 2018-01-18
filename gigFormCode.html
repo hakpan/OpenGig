@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-
-<html lang="en-us">
+<html lang="en">
 <head>
-  <title>About Me</title>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <title>SignUp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
 </head>
 
 <body>
@@ -19,24 +19,25 @@
     <form>
   <div class="form-group">
     <label class="font-weight-bold">Artist or Band Name</label>
-    <input type="text" class="form-control" id="band-input" placeholder="enter artist or band name">
+    <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name">
   </div>
   <div class="form-group">
     <div class="row">
     <div class="col-4">
       <label class="font-weight-bold">US City Location</label>
-        <input type="text" class="form-control" placeholder="enter city name">
+        <input type="text" class="form-control" id="city-name-input" placeholder="enter city name">
+
       </div>
     <div class="col-2">
       <label class="font-weight-bold">US State</label>
-      <input type="text" class="form-control" placeholder="enter 2-letter state">
+      <input type="text" class="form-control" id="state-abbr-input" placeholder="enter 2-letter state">
       </div>
   </div>
     
   <div class="form-group">
     <label class="font-weight-bold">Genre</label>
     <small id="selectionHelp" class="form-text text-muted">Select up to 3 genres</small>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+    <select multiple class="form-control" id="genre-input">
       <option>Rock</option>
       <option>Country</option>
       <option>Reggae</option>
@@ -49,7 +50,22 @@
   </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 
+
+  <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Javascript -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JQuery Plugin link -->
+   <script type="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+   <!--Link to the Gig Form JS page-->
+  <script type="text/javascript" src="assets/plugins/jquery.validate.js"></script>
+
+
 </form>
 </div>
 </body>
+
 </html>
