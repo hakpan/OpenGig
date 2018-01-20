@@ -1,4 +1,4 @@
-alert("I'm Linked");
+
 /*!
  * jQuery Validation Plugin v1.17.0
  *
