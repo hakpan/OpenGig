@@ -46,3 +46,7 @@ div.jumbotron.d-flex.align-items-center.fill.kanye{
     padding-top:100px;
     padding-bottom:100px;
 }
+
+div.row.justify-content-center{
+    color: #000000;
+}
