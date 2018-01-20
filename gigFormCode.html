@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SignUp</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
- for validating form fields-->
-  <script src="assets/javascript/validate.js"></script>
 
-      
+  <!--link to bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!-- link to CSS style file -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
+
   <div class="container">
-    <div class="jumbotron jumbotron-fluid"; color: white id="signup-form">
-      <img src="/guitarimage" class="img-fluid" alt="Responsive image">
+    <div class="jumbotron jumbotron-fluid"; color: white id="signup-form" background-image: img src="/assets/images/guitarimage.jpg" class="img-fluid" alt="Responsive image">
 
       <h1 class="text-center">Artist or Band Sign-up page!</h1>
       <p class="text-center">Please complete the form to be added to our database</p>
     </div>
    <!-- Add artist form  -->
     <form id="signup-form">
+      
       <div class="form-group">
-        <label class="font-weight-bold">Artist or Band Name</label>
-
+        <label class="font-weight-bold">Artist or Band Name (this will be your username)</label>
         <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name" required>
-
+      </div>
+      
+      <div class="form-group">
+        <label class="col-sm-2 col-form-label font-weight-bold">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
       </div>
 
       <div class="form-group">
@@ -117,13 +123,10 @@
       </div>
       <button type="submit" class="btn btn-primary" id="submit">Submit</button>
     </form>
-  </div>
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+  </div>  
 
-    <!-- Javascript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
 
     <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
@@ -132,9 +135,11 @@
     <!-- JQuery Plugin link -->
   <script type="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-   <!--Link to the Gig Form JS page-->
-  <script type="text/javascript" src="assets/plugins/jquery.validate.js"></script>
+  <!-- Javascript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-</body>
+
+ <!--Link to the form page JS -->
+<script type="text/javascript" src="assets/javascript/validate.js"></script>
 
 </html>
