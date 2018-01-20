@@ -44,7 +44,7 @@
             </div>
             <div class="col-1">
               <label class="font-weight-bold">US State</label><br>
-              <select name="state" class="form-control">
+              <select name="state" class="form-control" id="state-abbr-input">
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
                 <option value="AZ">AZ</option>
@@ -115,14 +115,19 @@
           <option>Latin</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="submit">Submit</button>
     </form>
   </div>
+
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
     <!-- Javascript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script type="text/javascript" src="assets/javascript/firebase.js"></script>
 
     <!-- JQuery Plugin link -->
   <script type="http://code.jquery.com/jquery-2.1.1.min.js"></script>
