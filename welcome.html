@@ -6,25 +6,119 @@
 	<title>Open Gig</title>
 
 	  <!-- Bootstrap File -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS Style Sheet Link -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 
    <!--Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+
+
 
 </head>
 <body>
 
 <div class="container-full">
 
-	<div class="jumbotron d-flex align-items-center fill">
+	<div class="jumbotron d-flex align-items-center fill kanye">
 		<div class="full-width">
 			<h1 class="display-4 text-center">OpenGig</h1>
-			<br><br><br>
-			<p class="lead text-center">
-				<a class="btn btn-primary btn-lg m-4" id="mBtn" href="#" role="button">Musicians</a>
-				<a class="btn btn-primary btn-lg m-4" id="vBtn" href="#" role="button">Venues</a>
-				<a class="btn btn-primary btn-lg m-4" id="bBtn" href="#" role="button">Browse</a>
-			</p>
+			<br><br>
+
+			<div class="row justify-content-center" id="btnDiv">
+				<!-- Musicain Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg m-4" data-toggle="modal" data-target="#exampleModalCenter">
+				  Musician
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLongTitle">Musician</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        Login or Sign up and get ready to be booked! 
+				      </div>
+				      <div class="modal-footer">
+
+				        <a href="login.html" target="_blank"><button type="button" class="btn btn-secondary">Login</button></a>
+						
+						<a href="gigFormCode.html" target="_blank">
+				        <button type="button" class="btn btn-primary">Sign Up</button></a>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+	
+				<!-- Venue Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg m-4" data-toggle="modal" data-target="#exampleModal">
+				  Venue
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLongTitle">Venue</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        Login or Sign and get ready to book some talent! 
+				      </div>
+				      <div class="modal-footer">
+				        <a href="login.html" target="_blank"><button type="button" class="btn btn-secondary">Login</button></a>
+
+				        <a href="#" target="_blank">
+				        <button type="button" class="btn btn-primary">Sign Up</button></a>
+
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			
+				<!-- Browse Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg m-4" data-toggle="modal" data-target="#ModalCenter">
+				  Browse
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLongTitle">Browse</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        Are you ready to browse through great musical talent and see venues who are booking musicans from Open Gig?
+				      </div>
+				      <div class="modal-footer">
+				        <a href="#" target="_blank"><button type="button" class="btn btn-primary">YES!</button></a>
+
+				        <a href="#" target="_blank"><button type="button" class="btn btn-secondary" data-dismiss="modal">No</button></a>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 	<div class="row py-3 mx-0 bg-a">
@@ -66,11 +160,10 @@
 
 </body>
 
-<!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-
   <!-- Javascript -->
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--    -->
 
  <!--Link to the welcome page JS -->
 <script type="text/javascript" src="assets/javascript/welcomePage.js"></script>
