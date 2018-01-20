@@ -1,3 +1,4 @@
+alert("Page works");
 $().ready(function() {	
 	$("#signup-form").validate({
 		rules: {
