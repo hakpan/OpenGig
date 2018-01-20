@@ -1,38 +1,70 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
+</head>
 
-<html lang="en-us">
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid" style="background-color: DarkKhaki; color: white">
+      <h1 class="text-center">Artist or Band Sign-up page!</h1>
+      <p class="text-center">Please complete the form to be added to our database</p>
+    </div>
+   <!-- Add artist form  -->
+    <form>
 
-   <!-- Add artist  -->
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title"><strong>Add Artist or Band</strong></h3>
-        </div>
-      <div class="panel-body">
-
-        <!-- Entry Form -->
-        <form>
-          <div class="form-group">
-            <label for="artist-name-input">Artist or Band Name</label>
-            <input class="form-control" id="artist-name-input" type="text">
-          </div>
-          <div class="form-group">
-            <label for="genre-input">Genre</label>
-            <input class="form-control" id="genre-input" type="text">
-          </div>
-          <div class="form-group">
-            <label for="location-input">Location or city</label>
-            <input class="form-control" id="location-input" type="text">
-          </div>
-          <div class="form-group">
-            <label for="rate-input">Rate</label>
-            <input class="form-control" id="rate-input" type="text">
-          </div>
-          <button class="btn btn-primary" id="add-artist-btn" type="submit">Submit</button>
-        </form>
-
+      <div class="form-group">
+        <label class="font-weight-bold">Artist or Band Name</label>
+        <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name">
       </div>
 
-    </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-4">
+            <label class="font-weight-bold">US City Location</label>
+            <input type="text" class="form-control" id="city-name-input" placeholder="enter city name">
+          </div>
+          <div class="col-2">
+            <label class="font-weight-bold">US State</label>
+            <input type="text" class="form-control" id="state-abbr-input" placeholder="enter 2-letter state">
+          </div>
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <label class="font-weight-bold">Genre</label>
+        <small id="selectionHelp" class="form-text text-muted">Select up to 3 genres</small>
+        <select multiple class="form-control" id="genre-input">
+          <option>Rock</option>
+          <option>Country</option>
+          <option>Reggae</option>
+          <option>Alternative</option>
+          <option>Heavy Metal</option>
+          <option>Jazz</option>
+          <option>Blues</option>
+          <option>Latin</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-  </body>
+    <!-- Javascript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JQuery Plugin link -->
+  <script type="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+   <!--Link to the Gig Form JS page-->
+  <script type="text/javascript" src="assets/plugins/jquery.validate.js"></script>
+
+</body>
+
 </html>
