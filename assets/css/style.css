@@ -36,3 +36,13 @@ html,body{height:100%;}
    
 }
 
+/*welcome page header*/
+div.jumbotron.d-flex.align-items-center.fill.kanye{
+    color:#fff;
+    text-align:center;
+    background: url('../images/kanye.jpg');
+    background-size:cover;
+    background-position:center;
+    padding-top:100px;
+    padding-bottom:100px;
+}
