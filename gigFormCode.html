@@ -6,22 +6,26 @@
   <title>SignUp</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
- for validating form fields-->
-  <script src="assets/javascript/validate.js"></script>
-
-      
 </head>
 
 <body>
   <div class="container">
-    <div class="jumbotron jumbotron-fluid"; color: white id="signup-form">
-      <img src="/guitarimage" class="img-fluid" alt="Responsive image">
+    <div class="jumbotron jumbotron-fluid"; color: white id="signup-form" background-image: img src="/assets/images/guitarimage.jpg" class="img-fluid" alt="Responsive image">
 
       <h1 class="text-center">Artist or Band Sign-up page!</h1>
       <p class="text-center">Please complete the form to be added to our database</p>
     </div>
    <!-- Add artist form  -->
     <form id="signup-form">
+      <div class="form-group">
+        <label class="font-weight-bold">Create Username</label>
+        <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name" required>
+      </div>
+    </div>
+      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
       <div class="form-group">
         <label class="font-weight-bold">Artist or Band Name</label>
         <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name" required>
@@ -125,8 +129,9 @@
     <!-- JQuery Plugin link -->
   <script type="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-   <!--Link to the Gig Form JS page-->
-  <script type="text/javascript" src="assets/plugins/jquery.validate.js"></script>
+   <!--Link to the validation js file-->
+  <!-- <script type="text/javascript" src="assets/javascript/validate.js"></script> -->
+  <script src="assets/javascript/validate.js"></script>    
 
 </body>
 
