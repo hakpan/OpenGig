@@ -11,17 +11,19 @@ firebase.initializeApp(config);
 var dataRef = firebase.database();
 
 var artist = "";
+var password = "";
 var website = "";
 var cityName = "";
 var stateAbbr = "";
 var genre = [];
 
 $("#submit").on("click", function() {
-	artist = $("artist-name-input").val().trim();
-	website = $("website-input").val().trim();
-	cityName = $("city-name-input").val().trim();
-	stateAbbr = $("state-abbr-input").val();
-	genre = $("genre-input").val();
+	artist = $("#artist-name-input").val().trim();
+	password = $("#inputPassword").val();
+	website = $("#website-input").val().trim();
+	cityName = $("#city-name-input").val().trim();
+	stateAbbr = $("#state-abbr-input").val();
+	genre = $("#genre-input").val();
 
 	console.log(artist);
 	console.log(website);
@@ -29,4 +31,14 @@ $("#submit").on("click", function() {
 	console.log(stateAbbr);
 	console.log(genre);
 
-})
+	if (artist != "" && password != "" && website != "" && cityName != "" && stateAbbr != "" && genre != []) { //should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+		dataRef.ref().push({
+			artist: artist,
+			password: password,
+			website: website,
+			cityName: cityName,
+			stateAbbr: stateAbbr,
+			genre: genre
+		});
+	};
+});
