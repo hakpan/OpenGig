@@ -16,98 +16,117 @@
 
 <body>
 
-  <div class="container">
+  
+<div class="container">
     <div class="jumbotron jumbotron-fluid"; color: white id="signup-form" background-image: img src="/assets/images/guitarimage.jpg" class="img-fluid" alt="Responsive image">
 
       <h1 class="text-center">Artist or Band Sign-up page!</h1>
       <p class="text-center">Please complete the form to be added to our database</p>
-    </div>
-   <!-- Add artist form  -->
-    <form id="signup-form">
-      
-      <div class="form-group">
-        <label class="font-weight-bold">Artist or Band Name (this will be your username)</label>
-        <input type="text" class="form-control" id="artist-name-input" placeholder="enter artist or band name" required>
-      </div>
-      
-      <div class="form-group">
-        <label class="col-sm-2 col-form-label font-weight-bold">Password</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-      </div>
 
-      <div class="form-group">
-        <div class="row">
-          <div class="col-6">
-          <label class="font-weight-bold">URL or Website</label>
-          <input type="url" class="form-control" id="website-input" placeholder="https://bandname.com">
+    </div>
+
+<!-- Add artist form  -->
+  <form class="needs-validation" novalidate>
+
+    <div class="form-row">
+      <label for="validationCustom01">User Name</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Artist or Band Name" required>
+      <div class="valid-feedback">
+        Well Hello!
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="validationCustom02">Password</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Password" required>
+      <div class="valid-feedback">
+        I'm not looking
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="validationCustomUsername">URL or Website</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+        </div>
+        <input type=" url" class="form-control" id="website-input" placeholder="https://bandname.com" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Add https:// to your website or URL
         </div>
       </div>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-4">
-              <label class="font-weight-bold">US City Location</label>
-              <input type="text" class="form-control" id="city-name-input" placeholder="enter city name">
-            </div>
-            <div class="col-1">
-              <label class="font-weight-bold">US State</label><br>
-              <select name="state" class="form-control" id="state-abbr-input">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AR">AR</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="DC">DC</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MD">MD</option>
-                <option value="MA">MA</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-                </select>
-            </div>
-          </div>
-        </div>
-    
-      <div class="form-group">
+    </div>
+  
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom04">State</label>
+      <select name="text" class="form-control" id="validationCustom04" required>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+        </select>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
         <label class="font-weight-bold">Genre</label>
         <small id="selectionHelp" class="form-text text-muted">Select up to 3 genres</small>
         <select multiple class="form-control" id="genre-input">
@@ -115,23 +134,29 @@
           <option>Country</option>
           <option>Reggae</option>
           <option>Alternative</option>
-          <option>Electronic</option>
           <option>Heavy Metal</option>
           <option>Jazz</option>
           <option>Blues</option>
-          <option>Classical</option>
           <option>Latin</option>
-          <option>Hip Hop</option>
-          <option>Folk</option>
-          <option>R&#38B</option>
-          <option>Coffee House</option>
         </select>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
       </div>
-      <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-    </form>
+    </div>
+  </div>
 
-  </div>  
-
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+</div>
 </body>
 
     <!-- Firebase -->
