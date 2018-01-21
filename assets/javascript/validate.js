@@ -18,5 +18,20 @@ $().ready(function() {
     });
   }, false);
 })();
+
+//This was Sandy's section and I haven't checked if
+//it works with the above script
+ var last_valid_selection = null;
+
+      $('#genre-input').change(function(event) {
+        if ($(this).val().length > 3) {
+          alert('You can only choose 3!');
+          $(this).val(last_valid_selection);
+        } else {
+          last_valid_selection = $(this).val();
+        }
+      });
+
 	
 });
+
