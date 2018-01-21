@@ -17,7 +17,7 @@ var cityName = "";
 var stateAbbr = "";
 var genre = [];
 
-$("#submit").on("click", function() {
+$("#submit-new-artist").on("click", function() {
 	artist = $("#artist-name-input").val().trim();
 	password = $("#inputPassword").val();
 	website = $("#website-input").val().trim();
@@ -42,3 +42,7 @@ $("#submit").on("click", function() {
 		});
 	};
 });
+
+$("#login-button").on("click", function() {
+	dataRef.ref().get()
+})
