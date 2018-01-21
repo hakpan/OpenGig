@@ -32,6 +32,12 @@ $().ready(function() {
         }
       });
 
-	
-});
-
+    });
+// $("signupForm").validate({
+// 	rules: {
+// 		artist-name-input: "required"
+// 	}
+// 	messages: {
+// 		artist-name-input: "Please enter your band name"
+// 	}
+// });
