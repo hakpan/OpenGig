@@ -17,10 +17,10 @@ $().ready(function() {
       }, false);
     });
   }, false);
+
 })();
 
-//This was Sandy's section and I haven't checked if
-//it works with the above script
+//Will give a warning when you choose more then 3 generes
  var last_valid_selection = null;
 
       $('#genre-input').change(function(event) {

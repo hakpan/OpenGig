@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Venues</title>
+  <title>Musicians</title>
  
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -40,11 +40,11 @@
          <li class="nav-item">
             <a class="nav-link" href="login.html">Log In</a>
          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="musicians.html">Musicians</a>
-         </li>
          <li class="nav-item active">
-            <a class="nav-link" href="#">Venues <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="musicians.html">Musicians<span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="venuePage.html">Venues</a>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="#">Browse</a>
@@ -58,8 +58,8 @@
 
 
 <!--Jumbotron -->
-<div class="jumbotron2 text-center mb-3">
-  <h1 class="display-4">Venues</h1>
+<div class="jumbotron3 text-center mb-3">
+  <h1 class="display-4">Musicians</h1>
   <p class="lead"></p>
   <p></p>
 </div>
@@ -69,16 +69,14 @@
 
 <!-- Table -->
 <div class="card">
-<div class="card-header">Venue List</div>
+<div class="card-header">Musician List</div>
 <table id='employee-table' class="table">
   <thead>
     <tr>
-      <th>Venue Name</th>
+      <th>Musicians</th>
       <th>Location</th>
-      <th>Gigs Available</th>
-      <th>Gig Date</th>
        <th>Genres</th>
-      <th>Budget</th>
+      <th>Rate</th>
     </tr>
   </thead>
   <tbody>
