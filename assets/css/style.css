@@ -20,16 +20,20 @@ html,body{height:100%;}
 }
 
 .bg-a {
-	background-color: red;
+	background-color: #000000;
+    color: #fff;
 }
 
 .bg-b {
-	background-color: green;
+	background-color: #000000;
+    color: #fff;
 }
 
 .bg-c {
-	background-color: blue;
+	background-color: #000000;
+    color: #fff;
 }
+
 
 /*btn div*/
 #btn {
