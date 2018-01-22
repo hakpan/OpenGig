@@ -1,48 +1,90 @@
-var config = {
-	apiKey: "AIzaSyDmxB9LPiDc99yS0ggUBgEqfegNG7Bdf24",
-	authDomain: "opengig-150a3.firebaseapp.com",
-	databaseURL: "https://opengig-150a3.firebaseio.com",
-	projectId: "opengig-150a3",
-	storageBucket: "opengig-150a3.appspot.com",
-	messagingSenderId: "17557724214"
-};
-firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC61WrABW6CFd-EDGepLsXbYlwzRfXSngI",
+    authDomain: "opengig-a3cc4.firebaseapp.com",
+    databaseURL: "https://opengig-a3cc4.firebaseio.com",
+    projectId: "opengig-a3cc4",
+    storageBucket: "opengig-a3cc4.appspot.com",
+    messagingSenderId: "880941324318"
+  };
+  firebase.initializeApp(config);
 
+//Create a variable to reference the database.
 var dataRef = firebase.database();
 
+//Variables
+// ----------------------------
+//Initial Artist list values
 var artist = "";
 var password = "";
-var website = "";
-var cityName = "";
-var stateAbbr = "";
+var url = "";
+var city = "";
+var state = "";
 var genre = [];
 
-$("#submit-new-artist").on("click", function() {
-	artist = $("#artist-name-input").val().trim();
-	password = $("#inputPassword").val();
-	website = $("#website-input").val().trim();
-	cityName = $("#city-name-input").val().trim();
-	stateAbbr = $("#state-abbr-input").val();
+//Capture Submit Button Click
+$("#submitArtist").on("click", function() {
+	//Don't refresh page!
+	event.preventDefault();
+
+	//Get artist data from DOM
+	artist = $("#validationUserName").val().trim();
+	password = $("#validationPassword").val().trim();
+	url = $("#validationUrl").val();
+	city = $("#validationCity").val().trim();
+	state = $("#validationState").val().trim();
 	genre = $("#genre-input").val();
 
 	console.log(artist);
-	console.log(website);
-	console.log(cityName);
-	console.log(stateAbbr);
+	console.log(url);
+	console.log(city);
+	console.log(state);
 	console.log(genre);
 
-	if (artist != "" && password != "" && website != "" && cityName != "" && stateAbbr != "" && genre != []) { //should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
-		dataRef.ref().push({
-			artist: artist,
-			password: password,
-			website: website,
-			cityName: cityName,
-			stateAbbr: stateAbbr,
-			genre: genre
-		});
-	};
+// Clear out input text as a courtesy to your user.
+  $("#validationUserName").val("");
+  $("#validationPassword").val("");
+  $("#validationUrl").val("");
+  $("#validationCity").val("");
+  $("#validationState").val("");
+  $("#genre-input").val("");
+
+  	// Push data to database.
+  	database.ref().push({
+    artist: artist,
+    url: url,
+    city: city,
+    state: state,
+    genre: genre
+
+
+	// if (artist != "" && password != "" && website != "" && cityName != "" && stateAbbr != "" && genre != []) { 
+	// //should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+	// 	dataRef.ref().push({
+	// 		artist: artist,
+	// 		password: password,
+	// 		url: url,
+	// 		city: city,
+	// 		state: state,
+	// 		genre: genre
+	// 	});
+	// };
+	});
 });
 
-$("#login-button").on("click", function() {
-	dataRef.ref().get()
-})
+// Firebase watcher
+// Retrieve list of musicians using child_added
+
+database.ref().on("child_added", function(snapshot) {
+  	
+  // Build up musician table in DOM.
+  $("#musicianList").append("<tr>" +
+                        "<th>" + snapshot.val().artist + "</th>" +
+                        "<th>" + snapshot.val().url + "</th>" +
+                        "<th>" + snapshot.val().city + "</th>" +
+                        "<th>" + snapshot.val().state + "</th>" +
+                        "<th>" + snapshot.val().genre + "</th>" +
+                      "</tr>");
+});
+
+
