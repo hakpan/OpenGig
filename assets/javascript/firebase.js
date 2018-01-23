@@ -14,10 +14,15 @@ var dataRef = firebase.database();
 
 //Variables
 // ----------------------------
-//Initial Artist list values
-var artist = "";
+//Initial list values
+var userType = "";
+var username = "";
+var emailAddress = "";
 var password = "";
 var url = "";
 var city = "";
 var state = "";
 var genre = [];
+var gigsAvailable = "";
+var gigDates = "";
+var budget = "";
