@@ -3,8 +3,11 @@ $("#submitArtist").on("click", function(event) {
 	//Don't refresh page!
 	event.preventDefault();
 
+	//if artist is submitted, usertype in server will be artist
+	userType = "artist";
+
 	//Get artist data from DOM
-	artist = $("#validationUserName").val().trim();
+	username = $("#validationUserName").val().trim();
 	password = $("#validationPassword").val().trim();
 	url = $("#validationUrl").val();
 	city = $("#validationCity").val().trim();
@@ -21,7 +24,8 @@ $("#submitArtist").on("click", function(event) {
 	if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
 	//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
 		dataRef.ref().push({
-			artist: artist,
+			userType: userType,
+			username: username,
 			password: password,
 			url: url,
 			city: city,
