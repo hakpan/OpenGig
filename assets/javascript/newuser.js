@@ -15,15 +15,15 @@ $("#submitArtist").on("click", function(event) {
 	state = $("#validationState").val().trim();
 	genre = $("#genre-input").val();
 
-	// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-	// 	// Handle Errors here.
-	// 	var errorCode = error.code;
-	// 	var errorMessage = error.message;
-	// });
-
 
 	if (username != "" && email != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
 	//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+		firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+			// Handle Errors here.
+			var errorCode = error.code;
+			var errorMessage = error.message;
+		});
+
 		dataRef.ref().push({
 			userType: userType,
 			username: username,
