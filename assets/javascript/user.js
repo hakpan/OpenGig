@@ -1,4 +1,4 @@
-$(".login-button").on("click", function () {
+$("#login-button").on("click", function () {
 	email = $("#lg_username").val();
 	password = $("#lg_password").val();
 
@@ -8,6 +8,8 @@ $(".login-button").on("click", function () {
 		var errorMessage = error.message;
 	});
 });
+
+
 
 
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
