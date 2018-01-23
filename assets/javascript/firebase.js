@@ -35,47 +35,25 @@ $("#submitArtist").on("click", function() {
 	state = $("#validationState").val().trim();
 	genre = $("#genre-input").val();
 
-	console.log(artist);
-	console.log(url);
-	console.log(city);
-	console.log(state);
-	console.log(genre);
 
-// Clear out input text as a courtesy to your user.
-  $("#validationUserName").val("");
-  $("#validationPassword").val("");
-  $("#validationUrl").val("");
-  $("#validationCity").val("");
-  $("#validationState").val("");
-  $("#genre-input").val("");
-
-  	// Push data to database.
-  	database.ref().push({
-    artist: artist,
-    url: url,
-    city: city,
-    state: state,
-    genre: genre
-
-
-	// if (artist != "" && password != "" && website != "" && cityName != "" && stateAbbr != "" && genre != []) { 
-	// //should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
-	// 	dataRef.ref().push({
-	// 		artist: artist,
-	// 		password: password,
-	// 		url: url,
-	// 		city: city,
-	// 		state: state,
-	// 		genre: genre
-	// 	});
-	// };
+if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
+//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+	dataRef.ref().push({
+		artist: artist,
+		password: password,
+		url: url,
+		city: city,
+		state: state,
+		genre: genre
 	});
+};
 });
+
 
 // Firebase watcher
 // Retrieve list of musicians using child_added
 
-database.ref().on("child_added", function(snapshot) {
+dataRef.ref().on("child_added", function(snapshot) {
   	
   // Build up musician table in DOM.
   $("#musicianList").append("<tr>" +
