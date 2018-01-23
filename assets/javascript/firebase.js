@@ -53,16 +53,24 @@ if (artist != "" && password != "" && url != "" && city != "" && state != "" && 
 // Firebase watcher
 // Retrieve list of musicians using child_added
 
-dataRef.ref().on("child_added", function(snapshot) {
+dataRef.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+  var artist = childSnapshot.val().artist;
+  var url = childSnapshot.val().url;
+  var city = childSnapshot.val().city;
+  var state = childSnapshot.val().state;
+  var genre = childSnapshot.val().genre;
+
+console.log(childSnapshot.val().artist);
+console.log(childSnapshot.val().url);
+console.log(childSnapshot.val().city);
+console.log(childSnapshot.val().state);
+console.log(childSnapshot.val().genre);
   	
   // Build up musician table in DOM.
-  $("#musicianList").append("<tr>" +
-                        "<th>" + snapshot.val().artist + "</th>" +
-                        "<th>" + snapshot.val().url + "</th>" +
-                        "<th>" + snapshot.val().city + "</th>" +
-                        "<th>" + snapshot.val().state + "</th>" +
-                        "<th>" + snapshot.val().genre + "</th>" +
-                      "</tr>");
+  $("#musicianList > tbody").append("<tr><td>" + name + "</td><td>" + dest + "</td><td>" +
+  freq + "</td><td>" + nextTrainFormat + "</td><td>" + minTillTrain + "</td></tr>");
+
 });
 
 
