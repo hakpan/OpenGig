@@ -18,7 +18,7 @@ $().ready(function() {
     });
   }, false);
 
-})();
+});
 
 //Will give a warning when you choose more then 3 generes
  var last_valid_selection = null;
