@@ -8,6 +8,7 @@ $("#submitArtist").on("click", function(event) {
 
 	//Get artist data from DOM
 	username = $("#validationUserName").val().trim();
+	email = $("#validationEmailAddress").val();
 	password = $("#validationPassword").val().trim();
 	url = $("#validationUrl").val();
 	city = $("#validationCity").val().trim();
@@ -21,12 +22,11 @@ $("#submitArtist").on("click", function(event) {
 	// });
 
 
-	if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
+	if (username != "" && email != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
 	//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
 		dataRef.ref().push({
 			userType: userType,
 			username: username,
-			password: password,
 			url: url,
 			city: city,
 			state: state,
