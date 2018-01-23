@@ -1,11 +1,11 @@
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyC61WrABW6CFd-EDGepLsXbYlwzRfXSngI",
-    authDomain: "opengig-a3cc4.firebaseapp.com",
-    databaseURL: "https://opengig-a3cc4.firebaseio.com",
-    projectId: "opengig-a3cc4",
-    storageBucket: "opengig-a3cc4.appspot.com",
-    messagingSenderId: "880941324318"
+    apiKey: "AIzaSyDmxB9LPiDc99yS0ggUBgEqfegNG7Bdf24",
+    authDomain: "opengig-150a3.firebaseapp.com",
+    databaseURL: "https://opengig-150a3.firebaseio.com",
+    projectId: "opengig-150a3",
+    storageBucket: "opengig-150a3.appspot.com",
+    messagingSenderId: "17557724214"
   };
   firebase.initializeApp(config);
 
@@ -23,7 +23,7 @@ var state = "";
 var genre = [];
 
 //Capture Submit Button Click
-$("#submitArtist").on("click", function() {
+$("#submitArtist").on("click", function(event) {
 	//Don't refresh page!
 	event.preventDefault();
 
@@ -35,18 +35,30 @@ $("#submitArtist").on("click", function() {
 	state = $("#validationState").val().trim();
 	genre = $("#genre-input").val();
 
+	console.log(artist);
+	console.log(url);
+	console.log(city);
+	console.log(state);
+	console.log(genre);
 
-if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
-//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
-	dataRef.ref().push({
-		artist: artist,
-		password: password,
-		url: url,
-		city: city,
-		state: state,
-		genre: genre
-	});
-};
+	// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+	// 	// Handle Errors here.
+	// 	var errorCode = error.code;
+	// 	var errorMessage = error.message;
+	// });
+
+
+	if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
+	//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+		dataRef.ref().push({
+			artist: artist,
+			password: password,
+			url: url,
+			city: city,
+			state: state,
+			genre: genre
+		});
+	};
 });
 
 
@@ -56,13 +68,21 @@ if (artist != "" && password != "" && url != "" && city != "" && state != "" && 
 dataRef.ref().on("child_added", function(snapshot) {
   	
   // Build up musician table in DOM.
-  $("#musicianList").append("<tr>" +
-                        "<th>" + snapshot.val().artist + "</th>" +
-                        "<th>" + snapshot.val().url + "</th>" +
-                        "<th>" + snapshot.val().city + "</th>" +
-                        "<th>" + snapshot.val().state + "</th>" +
-                        "<th>" + snapshot.val().genre + "</th>" +
-                      "</tr>");
+$("#musicianList").append("<tr>" +
+	"<th>" + snapshot.val().artist + "</th>" +
+	"<th>" + snapshot.val().url + "</th>" +
+	"<th>" + snapshot.val().city + "</th>" +
+	"<th>" + snapshot.val().state + "</th>" +
+	"<th>" + snapshot.val().genre + "</th>" +
+	"</tr>");
+});
+
+$(".login-button").on("click", function () {
+	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+	});
 });
 
 
