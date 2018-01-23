@@ -1,13 +1,13 @@
   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDmxB9LPiDc99yS0ggUBgEqfegNG7Bdf24",
-    authDomain: "opengig-150a3.firebaseapp.com",
-    databaseURL: "https://opengig-150a3.firebaseio.com",
-    projectId: "opengig-150a3",
-    storageBucket: "opengig-150a3.appspot.com",
-    messagingSenderId: "17557724214"
-  };
-  firebase.initializeApp(config);
+var config = {
+	apiKey: "AIzaSyDmxB9LPiDc99yS0ggUBgEqfegNG7Bdf24",
+	authDomain: "opengig-150a3.firebaseapp.com",
+	databaseURL: "https://opengig-150a3.firebaseio.com",
+	projectId: "opengig-150a3",
+	storageBucket: "opengig-150a3.appspot.com",
+	messagingSenderId: "17557724214"
+};
+firebase.initializeApp(config);
 
 //Create a variable to reference the database.
 var dataRef = firebase.database();
@@ -34,12 +34,6 @@ $("#submitArtist").on("click", function(event) {
 	city = $("#validationCity").val().trim();
 	state = $("#validationState").val().trim();
 	genre = $("#genre-input").val();
-
-	console.log(artist);
-	console.log(url);
-	console.log(city);
-	console.log(state);
-	console.log(genre);
 
 	// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
 	// 	// Handle Errors here.
@@ -84,5 +78,3 @@ $(".login-button").on("click", function () {
 		var errorMessage = error.message;
 	});
 });
-
-
