@@ -1,4 +1,4 @@
-$(".login-button").on("click", function () {
+$("#login-button").on("click", function () {
 	email = $("#lg_username").val();
 	password = $("#lg_password").val();
 
@@ -8,6 +8,8 @@ $(".login-button").on("click", function () {
 		var errorMessage = error.message;
 	});
 });
+
+
 
 
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
@@ -27,7 +29,9 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
 	if(firebaseUser) {
-		console.log(firebaseUser);
+		console.log(firebaseUser.email);
+		$("#user-item").text("Log out");
+		$("#menu").append('<li class="nav-item"><a class="nav-link" href="#">'+ firebaseUser.email +'</a></li>');
 	} else {
 		console.log("not logged in");
 	};
