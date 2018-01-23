@@ -12,11 +12,3 @@ $("#musicianList").append("<tr>" +
 	"<th>" + snapshot.val().genre + "</th>" +
 	"</tr>");
 });
-
-$(".login-button").on("click", function () {
-	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-		// Handle Errors here.
-		var errorCode = error.code;
-		var errorMessage = error.message;
-	});
-});

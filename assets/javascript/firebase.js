@@ -17,8 +17,8 @@ var dataRef = firebase.database();
 //Initial list values
 var userType = "";
 var username = "";
-var emailAddress = "";
-var password = "";
+var email;
+var password;
 var url = "";
 var city = "";
 var state = "";
