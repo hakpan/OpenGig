@@ -1,7 +1,8 @@
 //Capture Submit Button Click
 $("#submitVenue").on("click", function(event) {
 	//Don't refresh page!
-	event.preventDefault();
+	//*****Leavig this code out because it messes up the validation
+	//event.preventDefault(); 
 
 	//if artist is submitted, usertype in server will be artist
 	userType = "venue";
