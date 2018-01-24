@@ -1,7 +1,7 @@
 //Capture Submit Button Click
 $("#submitArtist").on("click", function(event) {
 	//Don't refresh page!
-	//event.preventDefault();
+	event.preventDefault();
 
 	//if artist is submitted, usertype in server will be artist
 	userType = "artist";

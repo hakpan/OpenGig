@@ -1,9 +1,10 @@
+$().ready(function() {	
 
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
@@ -16,8 +17,8 @@
       }, false);
     });
   }, false);
-})();
 
+});
 
 //Will give a warning when you choose more then 3 generes
  var last_valid_selection = null;
@@ -31,11 +32,12 @@
         }
       });
 
- // $("signupForm").validate({
-	// rules: {
- // 		artist-name-input: "required"
- // 	}
- // 	messages: {
- // 		artist-name-input: "Please enter your band name"
-	// }
- // });
+    });
+// $("signupForm").validate({
+// 	rules: {
+// 		artist-name-input: "required"
+// 	}
+// 	messages: {
+// 		artist-name-input: "Please enter your band name"
+// 	}
+// });

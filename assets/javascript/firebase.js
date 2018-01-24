@@ -26,3 +26,4 @@ var genre = [];
 var gigsAvailable = "";
 var gigDates = "";
 var budget = "";
+var video = "";
