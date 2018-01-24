@@ -2,9 +2,61 @@
       
       function initMap() {
         // Create a map object and specify the DOM element for display.
+        var mapCenter = {lat: 44.9778, lng: -93.2650};
+        var marker1 = {lat: 44.9, lng: -93.1};
+        var marker2 = {lat: 44.96, lng: -93.23};
+        var marker3 = {lat: 44.89, lng: -93.28};
+        var marker4 = {lat: 44.98, lng: -93.2};
+        var marker5 = {lat: 44.981, lng: -93.07};
+        var marker6 = {lat: 44.99, lng: -93.28};
+        var marker7 = {lat: 44.92, lng: -93.25};
+        var marker8 = {lat: 44.91, lng: -93.5};
+        var marker9 = {lat: 44.9, lng: -93};
+        var marker10 = {lat: 44.98, lng: -93.2};
+
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 44.9778, lng: -93.2650},
-          zoom: 10
+          center: mapCenter,
+          zoom: 11
+        });
+        var marker1 = new google.maps.Marker({
+          position: marker1,
+          map: map
+        });
+        var marker2 = new google.maps.Marker({
+          position: marker2,
+          map: map
+        });
+        var marker3 = new google.maps.Marker({
+          position: marker3,
+          map: map
+        });
+        var marker4 = new google.maps.Marker({
+          position: marker4,
+          map: map
+        });
+        var marker5 = new google.maps.Marker({
+          position: marker5,
+          map: map
+        });
+        var marker6 = new google.maps.Marker({
+          position: marker6,
+          map: map
+        });
+        var marker7 = new google.maps.Marker({
+          position: marker7,
+          map: map
+        });
+        var marker8 = new google.maps.Marker({
+          position: marker8,
+          map: map
+        });
+        var marker9 = new google.maps.Marker({
+          position: marker9,
+          map: map
+        });
+        var marker10 = new google.maps.Marker({
+          position: marker10,
+          map: map
         });
       }
     
