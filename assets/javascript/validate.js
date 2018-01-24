@@ -17,8 +17,7 @@ $().ready(function() {
       }, false);
     });
   }, false);
-
-});
+})();
 
 //Will give a warning when you choose more then 3 generes
  var last_valid_selection = null;
@@ -32,7 +31,7 @@ $().ready(function() {
         }
       });
 
-    });
+   });
 // $("signupForm").validate({
 // 	rules: {
 // 		artist-name-input: "required"
