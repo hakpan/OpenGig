@@ -16,10 +16,10 @@ dataRef.ref().on("child_added", function(snapshot) {
 	} else {
 		$("#venueList").append("<tr>" +
 		"<th>" + snapshot.val().username + "</th>" +
-		"<th>" + snapshot.val().city + " ," + snapshot.val().state + "</th>" +
+		"<th>" + snapshot.val().city + ", " + snapshot.val().state + "</th>" +
 		"<th>" + snapshot.val().gigsAvailable + "</th>" +
 		"<th>" + snapshot.val().gigDate + "</th>" +
-		"<th>" + snapshot.val().ggenre + "</th>" +
+		"<th>" + snapshot.val().genre + "</th>" +
 		"<th>" + snapshot.val().budget + "</th>" +
 		"</tr>");
 	}
