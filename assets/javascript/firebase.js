@@ -23,6 +23,72 @@ var url = "";
 var city = "";
 var state = "";
 var genre = [];
+<<<<<<< HEAD
+
+//Capture Submit Button Click
+$("#submitArtist").on("click", function(event) {
+	//Don't refresh page!
+	event.preventDefault();
+
+	//Get artist data from DOM
+	artist = $("#validationUserName").val().trim();
+	password = $("#validationPassword").val().trim();
+	url = $("#validationUrl").val();
+	city = $("#validationCity").val().trim();
+	state = $("#validationState").val().trim();
+	genre = $("#genre-input").val();
+
+	console.log(artist);
+	console.log(url);
+	console.log(city);
+	console.log(state);
+	console.log(genre);
+
+	// firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+	// 	// Handle Errors here.
+	// 	var errorCode = error.code;
+	// 	var errorMessage = error.message;
+	// });
+
+
+	if (artist != "" && password != "" && url != "" && city != "" && state != "" && genre != []) { 
+	//should be replaced by an if statement that won't allow anything to happen unless it has passed validation test
+		dataRef.ref().push({
+			artist: artist,
+			password: password,
+			url: url,
+			city: city,
+			state: state,
+			genre: genre
+		});
+	};
+});
+
+
+// Firebase watcher
+// Retrieve list of musicians using child_added
+
+dataRef.ref().on("child_added", function(snapshot) {
+  	
+  // Build up musician table in DOM.
+$("#musicianList").append("<tr>" +
+	"<th>" + snapshot.val().artist + "</th>" +
+	"<th>" + snapshot.val().url + "</th>" +
+	"<th>" + snapshot.val().city + "</th>" +
+	"<th>" + snapshot.val().state + "</th>" +
+	"<th>" + snapshot.val().genre + "</th>" +
+	"</tr>");
+});
+
+$(".login-button").on("click", function () {
+	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+	});
+});
+=======
 var gigsAvailable = "";
 var gigDates = "";
 var budget = "";
+>>>>>>> 925d777ae8ec20f26f8b3f1ae8364a01f33b528f
