@@ -58,7 +58,7 @@
           position: marker10,
           map: map
         });
-      }
+      };
     
 
 //Youtube API
