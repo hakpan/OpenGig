@@ -91,3 +91,14 @@ div.jumbotron3.text-center.mb-3{
     padding-bottom:100px;
 }
 
+/*browse page styling*/
+div.jumbotron3.text-center.mb-3.browsePic{
+    color:#fff;
+    text-align:center;
+    background: url('../images/BrowsePic.jpg');
+    background-size:cover;
+    background-position:center;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
