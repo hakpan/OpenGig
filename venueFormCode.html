@@ -8,12 +8,8 @@
   <!--link to bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-  <!-- link to CSS style files -->
+  <!-- link to CSS style file -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-  <!-- link to Sweet Alert Style Sheet -->
-  <!--link rel="stylesheet" type="text/css" href="assets/css/sweetalert2.css" -->
-
 </head>
 
 <body>
@@ -63,8 +59,8 @@
   <form class="needs-validation" novalidate>
 
     <div class="form-row">
-      <label for="validationUserName">Artist Name</label>
-      <input type="text" class="form-control" id="validationUserName" placeholder="Artist or Band Name" required>
+      <label for="validationUserName">Venue Name</label>
+      <input type="text" class="form-control" id="validationUserName" placeholder="Venue Name" required>
       <div class="valid-feedback">
         Well Hello!
       </div>
@@ -95,6 +91,33 @@
         <div class="invalid-feedback">
           Add https:// to your website or URL
         </div>
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <label for="validationGigsAvailable">Gigs Available</label>
+      <input type="text" class="form-control" id="validationGigsAvailable" placeholder="Gigs Available" required>
+      <div class="valid-feedback">
+        Please add available gigs
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <label for="validationGigDate">Gig Date</label>
+      <input type="date" class="form-control" id="validationGigDate" placeholder="Gig Date" required>
+      <div class="valid-feedback">
+        Available gig dates
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <label for="validationBudget">Budget</label>
+      <input type="number" class="form-control" id="validationUBudget" placeholder="Budget" required>
+      <div class="valid-feedback">
+        Budget for Gig
       </div>
     </div>
 
@@ -208,10 +231,6 @@
   <!-- Javascript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a472be2804f1e22fba5905d07a424fefcea0d46c
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
   <script type="text/javascript" src="assets/javascript/firebase.js"></script>
@@ -219,14 +238,10 @@
   <script type="text/javascript" src="assets/javascript/newuser.js"></script>
   <script type="text/javascript" src="assets/javascript/childadded.js"></script>
 
-
 <!-- Modal -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<!-- Sweet Alert Script -->
- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
  <!--Link to the form page JS -->
 <script type="text/javascript" src="assets/javascript/validate.js"></script>
-<script type="text/javascript" src="assets/javascript/sweetalert2.js"></script>
 
 </html>
