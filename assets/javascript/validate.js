@@ -7,17 +7,13 @@
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
-      //alert("Got Here");
       form.addEventListener('submit', function(event) {
-        //alert("Test");
-        console.log("does it hit");
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
         }
         form.classList.add('was-validated');
       }, false);
-      alert("Got Here 2");
     });
   }, false);
 })();
